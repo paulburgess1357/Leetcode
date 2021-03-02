@@ -19,32 +19,32 @@
 // Explanation : In this case does not exist N and M, such that N = 2 * M.
 
 class Solution {
-	
+
 public:
 
-	// Time Complexity: O(n)
-	// Space Complexity O(1)
-	
+    // Time Complexity: O(n)
+    // Space Complexity O(1)
+
     bool checkIfExist(std::vector<int>& arr) {
 
-        for(int i = 0; i < arr.size(); i++){
+        for (int i = 0; i < arr.size(); i++) {
 
-        	const int current_val = arr[i];
+            const int current_val = arr[i];
             const int double_val = current_val * 2;
 
-        	for(int j = 0; j < arr.size(); j++){
+            for (int j = 0; j < arr.size(); j++) {
 
-                if(j == i){
+                if (j == i) {
                     continue;
                 }
-        		
-                if(arr[j] == double_val){
+
+                if (arr[j] == double_val) {
                     return true;
-                }        		
-        	}
-        	
+                }
+            }
+
         }
-    	
-        return false;    	
+
+        return false;
     }
 };
