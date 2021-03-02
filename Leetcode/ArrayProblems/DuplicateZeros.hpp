@@ -22,31 +22,31 @@
 // 0 <= arr[i] <= 9
 
 class Solution {
-	
+
 public:
 
     // Time Complexity: O(n^2)
-	// Space Complexity: O(1)
+    // Space Complexity: O(1)
 
     void duplicateZeros(std::vector<int>& arr) {
 
-        for(int i = 0; i < arr.size(); i++){
+        for (int i = 0; i < arr.size(); i++) {
 
-        	// If current element == 0, move all the next elements to the right
-        	if(arr.at(i) == 0){
+            // If current element == 0, move all the next elements to the right
+            if (arr.at(i) == 0) {
 
-        		// Note that we start from the back this time
-        		// This will also copy over the existing 0
-                for(int j = arr.size() - 1; j > i; j--){
-                    arr.at(j) = arr.at(j - 1);                	
+                // Note that we start from the back this time
+                // This will also copy over the existing 0
+                for (int j = arr.size() - 1; j > i; j--) {
+                    arr.at(j) = arr.at(j - 1);
                 }
 
-        		// Increment i to 'skip' over the zero we just placed
-        		// (So i gets incremented twice; Both here and from the loop)
+                // Increment i to 'skip' over the zero we just placed
+                // (So i gets incremented twice; Both here and from the loop)
                 i++;
-        	}
-        	
+            }
+
         }
-    	
+
     }
 };

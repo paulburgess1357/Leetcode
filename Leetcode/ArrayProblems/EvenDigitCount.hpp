@@ -17,37 +17,37 @@
 //	Therefore only 12 and 7896 contain an even number of digits.
 
 class Solution {
-	
+
 public:
 
     // Time Complexity: O(n)
-	// Space Complexity: O(1)
-	
+    // Space Complexity: O(1)
+
     int findNumbers(std::vector<int>& nums) {
 
         int even_digit_count = 0;
-        for(const auto& val : nums){
-            if(isEven(digitCount(val))){
+        for (const auto& val : nums) {
+            if (isEven(digitCount(val))) {
                 even_digit_count++;
-            }        	
+            }
         }
-    	
+
         return even_digit_count;
     }
-	
+
 private:
-	
-	// This works due to integer division
-	int digitCount(int num){
-		int count = 0;
-    	while(num != 0){
+
+    // This works due to integer division
+    int digitCount(int num) {
+        int count = 0;
+        while (num != 0) {
             num = num / 10;
             count++;
-    	}
+        }
         return count;
-	}
+    }
 
-    bool isEven(int num){
+    bool isEven(int num) {
         return num % 2 == 0;
-	}
+    }
 };

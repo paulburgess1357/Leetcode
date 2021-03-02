@@ -21,28 +21,28 @@
 // Explanation : There are no elements to the right of index 0.
 
 class Solution {
-	
+
 public:
 
     // Time Complexity: O(n)
-	// Space Complexity: O(1)
-	// https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/discuss/799052/easy-c%2B%2B-solution-O(n)faster-than-99.44
-	
+    // Space Complexity: O(1)
+    // https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/discuss/799052/easy-c%2B%2B-solution-O(n)faster-than-99.44
+
     std::vector<int> replaceElements(std::vector<int>& arr) {
 
         int max_val = -1;
-    	
-    	// Start loop from the back of the array
-        for(int i = arr.size() - 1; i >= 0; i--){
+
+        // Start loop from the back of the array
+        for (int i = arr.size() - 1; i >= 0; i--) {
             int current_val = arr[i];
 
-        	// Store max val encountered so far
+            // Store max val encountered so far
             arr[i] = max_val;
 
-        	// Update max value to be 'max' of what we have encountered
-            max_val = std::max(max_val, current_val);                    	        	
+            // Update max value to be 'max' of what we have encountered
+            max_val = std::max(max_val, current_val);
         }
-        return arr;    	
+        return arr;
     }
-	
+
 };

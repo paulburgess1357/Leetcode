@@ -25,64 +25,64 @@
 // matter what values are set beyond the returned length.
 
 class Solution {
-	
+
 public:
 
     // Leetcode Posted Solution
-	// Two index approach
+    // Two index approach
     // Time Complexity: O(n)
     // Space Complexity: O(1)
-    
+
     int removeElement(std::vector<int>& nums, int val) {
 
         // When the value at (i) = val, we skip overwriting the
-    	// array.  i is incremented and we move onto the next element.
-    	// If that next element != val, we write it in the 'write_idx'
-    	// location.  This continues until all elements have been examined.
-    	// The end of the array will contain extra values we don't need anymore.
-    	
+        // array.  i is incremented and we move onto the next element.
+        // If that next element != val, we write it in the 'write_idx'
+        // location.  This continues until all elements have been examined.
+        // The end of the array will contain extra values we don't need anymore.
+
         int write_idx = 0;
-    	for(int i = 0; i < nums.size(); i++){
-            if(nums.at(i) != val){
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums.at(i) != val) {
                 nums.at(write_idx) = nums.at(i);
                 write_idx++;
-            }    		
-    	}
+            }
+        }
 
-    	// We return write_idx.  This is the number of 'valid' elements in the
-    	// final array.  E.g. [3, 3] -> two valid elements
-    	// Note that the array above is edited in place.
+        // We return write_idx.  This is the number of 'valid' elements in the
+        // final array.  E.g. [3, 3] -> two valid elements
+        // Note that the array above is edited in place.
         return write_idx;
     }
 
     // Leetcode Posted Solution
-	// More efficient approach
+    // More efficient approach
     // Time Complexity: O(n)
     // Space Complexity: O(1)
 
-	// This is more efficient when elements to remove are sparse
+    // This is more efficient when elements to remove are sparse
     // This approach takes the last element in the array and swaps it with the
     // element to dispose of
-    
+
     // Note that this works even if it was an array like so: [8, 7, 7]
     // say val = 7.  The write_idx will be the value 1, so only the first
     // part of the array is used (assuming the user uses the returned value)
     // The 1 means there is 1 valid element.
 
-	int removeElement_ex2(std::vector<int>& nums, int val){
+    int removeElement_ex2(std::vector<int>& nums, int val) {
         int write_idx = 0;
         int read_idx = nums.size();
 
-    	while(write_idx < read_idx){
+        while (write_idx < read_idx) {
 
-            if(nums.at(write_idx) == val){
+            if (nums.at(write_idx) == val) {
                 nums.at(write_idx) = nums.at(read_idx - 1);
                 read_idx--;
-            } else{
+            } else {
                 write_idx++;
-            }    		
-    	}
+            }
+        }
         return write_idx;
     }
-	
+
 };

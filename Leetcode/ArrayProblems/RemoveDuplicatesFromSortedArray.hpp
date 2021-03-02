@@ -21,36 +21,36 @@
 // doesn't matter what values are set beyond the returned length.
 
 class Solution {
-	
+
 public:
 
-	// Leetcode Posted Solution
+    // Leetcode Posted Solution
     // Time Complexity: O(n)
-	// Space Complexity: O(1)
+    // Space Complexity: O(1)
 
     int removeDuplicates(std::vector<int>& nums) {
 
-        if(nums.empty()){
+        if (nums.empty()) {
             return 0;
         }
-    	
-        int write_idx = 0;
-    	for(int read_idx = 1; read_idx < nums.size(); read_idx++){
 
-            if(nums[write_idx] != nums[read_idx]){
+        int write_idx = 0;
+        for (int read_idx = 1; read_idx < nums.size(); read_idx++) {
+
+            if (nums[write_idx] != nums[read_idx]) {
                 // increment the write_idx to the next slot.  Then write the
                 // non-duplicate value.
-				// You must increment to the next slot, otherwise you will
-				// overwrite a previous unique value.
+                // You must increment to the next slot, otherwise you will
+                // overwrite a previous unique value.
                 write_idx++;
                 nums[write_idx] = nums[read_idx];
             }
 
-    		// Do nothing.  Increment the read_idx to skip the duplicate.
-    		// Note that the loop is what increments it.              		
-    	}
+            // Do nothing.  Increment the read_idx to skip the duplicate.
+            // Note that the loop is what increments it.              		
+        }
 
         // The plus 1 indicates the number of valid elements in the updated vector
-        return write_idx + 1; 
+        return write_idx + 1;
     }
 };

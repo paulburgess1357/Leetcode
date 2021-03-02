@@ -21,38 +21,38 @@
 // Explanation : Note that the third maximum here means the third maximum distinct number.
 // Both numbers with value 2 are both considered as second maximum.
 
-class Solution{
-	
+class Solution {
+
 public:
 
 	// Time Complexity: O(n)
 	// Space Complexity: O(1)
-	
-	int thirdMax(std::vector<int>& nums){
+
+	int thirdMax(std::vector<int>& nums) {
 
 		// Convert nums into unordered set
 		std::unordered_set<int> nums_set;
-		for(const auto & val : nums){
+		for (const auto& val : nums) {
 			nums_set.insert(val);
 		}
 
 		// Handle edge case where 3rd max does not exist (return max instead)
-		if(nums_set.size() < 3){
+		if (nums_set.size() < 3) {
 			return get_max(nums_set);
 		}
 
 		// Iterate over set and remove max twice
-		for(int i = 0; i < 2; i++){
+		for (int i = 0; i < 2; i++) {
 			nums_set.erase(get_max(nums_set));
 		}
 
 		// Now that both max set values have been removed, we can return the
 		// 3rd max set value:
 		return get_max(nums_set);
-		
+
 	}
 
-	static int get_max(std::unordered_set<int>& nums_set){
+	static int get_max(std::unordered_set<int>& nums_set) {
 		int max = INT_MIN;
 		for (const auto& val : nums_set) {
 			if (val > max) {
@@ -61,5 +61,5 @@ public:
 		}
 		return max;
 	}
-	
+
 };

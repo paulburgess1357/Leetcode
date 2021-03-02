@@ -16,31 +16,31 @@
 // The length of input array is a positive integer and will not exceed 10,000
 
 class Solution {
-	
+
 public:
 
-	// Time Complexity: O(n)
-	// Space Complexity: O(1)
-	
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+
     int findMaxConsecutiveOnes(std::vector<int>& nums) {
 
         int count = 0;
         int max_consecutive_count = 0;
 
-    	for (const auto& val : nums) {
+        for (const auto& val : nums) {
 
-    		if (val == 1) {
+            if (val == 1) {
                 count += 1;
 
-            	// Get max count (this also has the benefit of handling an 
-            	// array of only 1's.
-                max_consecutive_count = std::max(max_consecutive_count, count); 
+                // Get max count (this also has the benefit of handling an 
+                // array of only 1's.
+                max_consecutive_count = std::max(max_consecutive_count, count);
             } else {
                 count = 0;
             }
-    		
+
         }
-    	
+
         return max_consecutive_count;
     }
 };

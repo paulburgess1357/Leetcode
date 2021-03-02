@@ -17,11 +17,11 @@
 //	Target array :  [1, 1, 1, 2, 3, 4]
 
 class Solution {
-	
+
 public:
 
 	// Time Complexity: O(n log(n))
-    // Space Complexity: O(log n)
+	// Space Complexity: O(log n)
 
 	int heightChecker(std::vector<int>& heights) {
 
@@ -29,11 +29,11 @@ public:
 		std::sort(heights.begin(), heights.end());
 
 		int move_count = 0;
-		for(int i = 0; i < heights.size(); i++){
+		for (int i = 0; i < heights.size(); i++) {
 
-			if(heights_sorted[i] != heights[i]){
+			if (heights_sorted[i] != heights[i]) {
 				move_count++;
-			}						
+			}
 		}
 
 		return move_count;
