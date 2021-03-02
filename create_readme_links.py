@@ -2,7 +2,7 @@
 import os
 
 BASE_FOLDER = "c:/users/paulb/desktop/git_projects/Leetcode/Leetcode/ArrayProblems/"
-BASE_LINK = "https://github.com/paulburgess1357/Leetcode/Leetcode/"
+BASE_LINK = "https://github.com/paulburgess1357/Leetcode/blob/master/Leetcode/ArrayProblems/"
 OUTPUT = "c:/users/paulb/desktop/git_projects/Leetcode/markdown_links.txt"
 
 files = sorted(os.listdir(BASE_FOLDER))
@@ -17,5 +17,11 @@ for i in range(len(files)):
 with open(OUTPUT, 'w') as file:
     for link in file_links:
         file.write('%s\n' % link)
+
+
+
+
+
+
 
 
