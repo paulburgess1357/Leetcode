@@ -142,6 +142,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayProblems\BestTimeToBuySellStock.hpp" />
     <ClInclude Include="ArrayProblems\CheckIfNAndItsDoubleExist.hpp" />
     <ClInclude Include="ArrayProblems\ConsecutiveBinaryCount.hpp" />
     <ClInclude Include="ArrayProblems\DuplicateZeros.hpp" />
@@ -157,7 +158,9 @@
     <ClInclude Include="ArrayProblems\SortArrayByPariety.hpp" />
     <ClInclude Include="ArrayProblems\SquareAndSortArray.hpp" />
     <ClInclude Include="ArrayProblems\ThirdMaximumNumber.hpp" />
+    <ClInclude Include="ArrayProblems\TwoSum.hpp" />
     <ClInclude Include="ArrayProblems\ValidMountainArray.hpp" />
+    <ClInclude Include="ArrayProblems\VerifyingAnAlienDictionary.hpp" />
     <ClInclude Include="Utility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -71,5 +71,14 @@
     <ClInclude Include="ArrayProblems\ValidMountainArray.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ArrayProblems\TwoSum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayProblems\BestTimeToBuySellStock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayProblems\VerifyingAnAlienDictionary.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

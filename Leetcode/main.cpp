@@ -1,9 +1,13 @@
 #include <iostream>
-#include "./ArrayProblems/FindAllNumbersDisappearedInArray.hpp"
+#include <string>
+#include "./ArrayProblems/VerifyingAnAlienDictionary.hpp"
 
 int main(){
-	std::cout << "hi" << std::endl;
-	Solution solution_test{};
-	std::vector<int> input1 = { 4,3,2,7,8,2,3,1 };	
-	solution_test.findDisappearedNumbers(input1);	
+
+	std::string order{ "hlabcdefgijkmnopqrstuvwxyz" };
+	std::vector<std::string> words{ "hello","leetcode" };
+
+	Solution run_solution;
+	run_solution.isAlienSorted(words, order);
+	
 }
